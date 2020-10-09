@@ -8,6 +8,7 @@ before_script:
 - sudo apt-get install libboost-all-dev git automake autoconf dh-make fakeroot libpcsclite-dev pcscd pcsc-tools libssl1.0-dev -y --allow-unauthenticated
 - sudo mkdir -p /package/libgtop11dotnet-1.1
 - sudo chown -R travis:travis /home/travis/
+- sudo chmod u+w ~/.travis/travis.sh
 script:
 - sudo cp -r * /package/libgtop11dotnet-1.1
 - cd /package/libgtop11dotnet-1.1
