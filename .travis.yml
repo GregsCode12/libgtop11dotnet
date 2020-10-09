@@ -5,8 +5,7 @@ os: linux
 before_script:
 - sudo apt-get update
 - sudo apt-get upgrade --allow-unauthenticated
-- sudo apt-get install libboost-all-dev git automake autoconf dh-make fakeroot libpcsclite-dev libssl1.0-dev libssl-dev 1.0.2n-1ubuntu5.4 1.1.1-1ubuntu2.1~18.04.6
-  pcscd pcsc-tools -y --allow-unauthenticated
+- sudo apt-get install libboost-all-dev git automake autoconf dh-make fakeroot libpcsclite-dev libssl1.0-dev libssl-dev pcscd pcsc-tools -y --allow-unauthenticated
 - sudo mkdir -p /package/libgtop11dotnet-1.1
 - sudo chown -R travis:travis /home/travis/
 script:
