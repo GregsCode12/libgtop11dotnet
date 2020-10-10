@@ -20,4 +20,4 @@ deploy:
   keep_history: true
   skip_cleanup: true
   on:
-    branch: release-branch
+    branch: master
