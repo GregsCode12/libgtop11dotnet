@@ -17,8 +17,7 @@ script:
 before_deploy:
   - rvm $(travis_internal_ruby) --fuzzy
   - sudo ruby -S gem install dpl
-  - rvm install "ruby-2.0.0-p648"
-  - rvm use 2.0.0 --default
+  - sudo chmod -R u+w /home/travis/.rvm/gems/ruby-2.4.9/gems/dpl-1.10.15/.coveralls.yml
 deploy:
   provider: releases
   api_key:
