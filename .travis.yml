@@ -14,10 +14,6 @@ script:
 - cd /package/libgtop11dotnet-1.1
 - sudo dh_make --createorig --single -y
 - sudo dpkg-buildpackage -us -uc -sa -b
-before_deploy:
-  - rvm $(travis_internal_ruby) --fuzzy
-  - sudo ruby -S gem install dpl
-  - sudo chmod -R u+w /home/travis/.rvm/gems/ruby-2.4.9/gems/dpl-1.10.15/.coveralls.yml
 deploy:
   provider: releases
   api_key:
